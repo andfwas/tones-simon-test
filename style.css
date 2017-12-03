@@ -19,33 +19,34 @@ h1 {
 .tone {
   width: 20vw;
   height: 20vw;
-  border-radius: 20px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
 }
 
 #red {
-  background-color: red;
+  background-color: hsl(0, 100%, 50%);
 }
 #red:active {
-  background-color: white;
+  background-color: hsl(0, 100%, 65%);
 }
 
 #yellow {
-  background-color: yellow;
+  background-color: hsl(56, 80%, 50%);
 }
 #yellow:active {
-  background-color: white;
+  background-color: hsl(56, 80%, 80%);
 }
 
 #green {
-  background-color: green;
+  background-color: hsl(127, 80%, 50%);
 }
 #green:active {
-  background-color: white;
+  background-color: hsl(127, 80%, 80%);
 }
 
 #blue {
-  background-color: blue;
+  background-color: hsl(227, 100%, 50%);
 }
 #blue:active {
-  background-color: white;
+  background-color: hsl(227, 100%, 60%);
 }

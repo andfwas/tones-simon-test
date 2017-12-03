@@ -3,7 +3,7 @@ var tonesListeners = function() {
   for (var i = 0; i < tones.length; i++) {
     let tone = tones[i]
     tone.addEventListener('click', () => {
-      console.log(tone);
+      console.log(tone.id);
     })
   }
 }
