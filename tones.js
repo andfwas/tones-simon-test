@@ -1,4 +1,4 @@
-console.log('tones test')
+// console.log('tones test')
 
 // var audioCtx = new (window.AudioContext || window.webkitAudioContext)()
 // var oscillator = audioCtx.createOscillator()

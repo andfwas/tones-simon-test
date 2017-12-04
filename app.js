@@ -6,28 +6,30 @@ var tonesListeners = function() {
   for (var i = 0; i < tones.length; i++) {
     let tone = tones[i]
     tone.addEventListener('click', () => {
-      console.log(tone);
-      let oscillator = audioCtx.createOscillator()
-      let gainNode = audioCtx.createGain()
-      oscillator.type = "square"
-      oscillator.frequency.value = 200
-      oscillator.attackTime = 0.1
-      oscillator.decayTime = 0.5
-      oscillator.releaseTime = 0.5
-      gainNode.gain.value = 0.1
-      oscillator.connect(gainNode)
-      gainNode.connect(audioCtx.destination)
-      oscillator.start();
-      oscillator.stop(audioCtx.currentTime + 0.5)
-
+      playTone(tone)
     })
   }
 }
 tonesListeners()
 
-// function playTone(color) {
-//   if (color) {
-//     console.log(color);
-//
-//   }
-// }
+function playTone(color) {
+  if (color) {
+    var decay = decay
+    let frequency = color.id.length*40
+    let oscillator = audioCtx.createOscillator()
+    let gainNode = audioCtx.createGain()
+    // let time = audioCtx.currentTime
+    oscillator.type = "square"
+    oscillator.frequency.value = frequency
+    oscillator.attackTime = 0.01
+    oscillator.decayTime = 0.2
+    oscillator.releaseTime = 0.5
+    gainNode.gain.value = 0.1
+    oscillator.connect(gainNode)
+    gainNode.connect(audioCtx.destination)
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + 0.4)
+    console.log(audioCtx.currentTime)
+
+  }
+}
