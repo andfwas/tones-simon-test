@@ -18,13 +18,13 @@ function playTone(color) {
       let oscillator = audioCtx.createOscillator()
       let gainNode = audioCtx.createGain()
       let time = audioCtx.currentTime
-      let frequency  =color.id.length*30 - i*1.5
+      let frequency  =color.id.length*30 - i*0.15
       oscillator.type = "sawtooth"
       oscillator.frequency.value = frequency
       oscillator.attackTime = 0.01
 
       oscillator.releaseTime = 0.5
-      gainNode.gain.value = 0.3
+      gainNode.gain.value = 0.4
       oscillator.connect(gainNode)
       gainNode.connect(audioCtx.destination)
       oscillator.start();
